@@ -1,0 +1,90 @@
+body {
+    background: linear-gradient(#e66465, #9198e5);
+    font-size: 19px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper {
+    width: 60%;
+    background-color: white;
+    color: #000;
+    padding-bottom: 1px;
+    border-radius: 1%;
+}
+header{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: #000000;
+    padding-left: 20px;
+}
+h2{
+    padding-left: 15%;
+}
+img#icon{
+    border-radius: 10%;
+    max-width: 20%;
+    height: auto;
+}
+section{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.about{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.code {
+    background-color: #dddddd;
+    font-family: Lucida Console;
+    padding: 2px;
+    font-size: 105%;
+}
+a{
+    color: #434343;
+    font-family: Franklin Gothic Medium;
+}
+a:visited{
+    color: blue;
+}
+a[href^="mailto"]::after {
+    content: '\1F4E9'; /* Иконка */
+    padding-left: 5px; /* Расстояние от иконки до текста */
+    vertical-align: text-bottom; /* Выравнивание по вертикали */
+    font-size: 0.8em; /* Размер иконки */
+}
+.link{
+    color: white;
+    text-decoration: none;
+}
+.link:hover{
+    color: #0909a5;
+}
+#rs{
+    padding-top: 10px;
+    max-width: 30%;
+    height: auto;
+}
+
+footer{
+    background-color: #7076B3;
+    color: white;
+    text-align: right;
+    font-size: 1.6rem;
+    font-weight: 300;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
