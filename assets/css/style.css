@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    background-color: #dedede;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper {
+    width: 70%;
+    background-color: #ffffff;
+    color: #000;
+    padding-bottom: 1px;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    border-radius: 1% 1% 0 0 ;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    background: url("../src/background.jpg") no-repeat center;
+    background-size: cover;
+}
+h1{
+    color: #ffffff;
+    padding-left: 20px;
+}
+.columns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.column-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 25px;
+    max-width: 300px;
+}
+.column-2{
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+}
+h2{
+    padding-left: 10%;
+    color: #29565F;
+}
+h3{
+    color: #29565F;
+    letter-spacing: 1px;
+}
+img#icon{
+    border-radius: 50%;
+    max-width: 20%;
+    height: auto;
+}
+section{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.contacts ul{
+    list-style-type: none;
+    padding: 0;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+}
+.contact__icon{
+    padding: 5px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.skills__list{
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
+}
+.skills__item{
+    display: flex;
+    flex-direction: row;
+}
+.skills__icon{
+    padding-right: 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+.about{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.code {
+    background-color: #dddddd;
+    font-family: Lucida Console;
+    padding: 2px;
+    font-size: 105%;
+}
+a{
+    color: #434343;
+    text-decoration: none;
+    font-weight: bolder;
+}
+a:visited{
+    color: blue;
+}
+.link{
+    color: white;
+    text-decoration: none;
+}
+.link:hover{
+    color: #0909a5;
+}
+#rs{
+    padding-top: 10px;
+    max-width: 30%;
+    height: auto;
+}
+
+footer{
+    background-color: #408693;
+    border-radius: 0 0 1% 1% ;
+    color: white;
+    text-align: right;
+    font-size: 1.6rem;
+    font-weight: 300;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
