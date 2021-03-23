@@ -1,6 +1,6 @@
 # Pashkevich Tatsiana
 
-My CV cite: [https://pashkevichtania.github.io/CV/](https://pashkevichtania.github.io/CV/)
+My CV page: [https://pashkevichtania.github.io/CV/](https://pashkevichtania.github.io/CV/)
 
 ### Contact information:
 * [pashkevichtania2004@gmail.com](https://pashkevichtania2004@gmail.com)
