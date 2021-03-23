@@ -1,1 +1,1 @@
-https://PashkevichTania.github.io/rsschool-cv/
+https://pashkevichtania.github.io/CV/
