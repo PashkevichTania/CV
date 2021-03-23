@@ -104,12 +104,6 @@ section{
     padding-left: 5%;
     padding-right: 5%;
 }
-.code {
-    background-color: #dddddd;
-    font-family: Lucida Console;
-    padding: 2px;
-    font-size: 105%;
-}
 a{
     color: #434343;
     text-decoration: none;

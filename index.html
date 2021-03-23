@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>CV</title>
-    <link href="/assets/css/obsidian.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/css/prism.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" >
 </head>
 <body>
 <div class="wrapper">
@@ -103,14 +103,11 @@
                     <section>
                         <h3>Code examples</h3>
                         <div class="code">
-                    <pre><code data-language="javascript">let str = prompt('Введите строку');
-    str = str.replace(/\s/g, '');
-    let revStr=str.split('').reverse().join('');
-    if (revStr == str) {
-        alert("Строка палиндром");
-    } else {
-        alert("Строка не палиндром");
-    }</code></pre>
+                    <pre><code class="language-javascript">function squareDigits(num){
+  let digits = num.toString().split('');
+  let map = digits.map(x => (+x) * (+x));
+  return +map.join('');
+}</code></pre>
                         </div>
                     </section>
                     <section>
@@ -126,7 +123,7 @@
         <figure class="project">
             <img src="assets/src/img1.png" alt="fox" class="project__image">
             <figcaption>
-                <p class="cards__title">HTML,CSS</p>
+                <p class="cards__title">HTML, CSS</p>
                 <button type="button"
                         onclick="location.href='https://rolling-scopes-school.github.io/pashkevichtania-JSFE2021Q1/Wildlife/'"
                         class="btn-link">Link</button>
@@ -144,7 +141,7 @@
         <figure class="project">
             <img src="assets/src/img3.jpg" alt="cite" class="project__image">
             <figcaption>
-                <p class="cards__title">HTML,CSS,Python Django, SQL</p>
+                <p class="cards__title">HTML, CSS, Python Django, SQL</p>
                 <button type="button"
                         onclick="location.href='http://qwerty83468.pythonanywhere.com'"
                         class="btn-link">Link</button>
@@ -156,7 +153,6 @@
         <p>2021</p>
     </footer>
 </div>
-<script src="/assets/js/rainbow-custom.min.js"></script>
-<script src="/assets/js/languages/javascript.js"></script>
+<script src="assets/js/prism.js"></script>
 </body>
 </html>
