@@ -138,16 +138,17 @@ a:visited{
 }
 .project{
     background-color: #408693;
-    border: #0081f5;
+    border: 3px solid #1E4046;
     border-radius: 5%;
     text-align: center;
     color: white;
+    padding: 5px;
     max-width: 400px;
     max-height: 650px;
     margin-bottom: 50px;
 }
 .project__image{
-    border-radius: 5% 5% 0 0;
+    border-radius: 5%;
     width: 100%;
     height: auto;
 }
