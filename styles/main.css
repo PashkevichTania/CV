@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
+.header__active {
+  background-color: rgba(28, 5, 34, 0.9);
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 30px 100px 10px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100000;
+  transition: all 0.7s;
+}
+#header .header__logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  Letter-spacing: 2px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__list .nav__item :hover {
+  background: #fff;
+  color: #2b1055;
+}
+.nav__list .nav__item a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 15px;
+  margin-left: 20px;
+}
+
+.section_img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.section_img::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #1c0522, transparent);
+  z-index: 10000;
+}
+
+.section_img img {
+  position: absolute;
+  top: 0;
+  Left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+#moon {
+  mix-blend-mode: screen;
+}
+
+#mountains_front {
+  z-index: 10;
+}
+
+#text {
+  position: absolute;
+  right: -250px;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
+}
+
+#btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #261055;
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(100px);
+}
+
+.section_text {
+  position: relative;
+  padding: 100px;
+  background: linear-gradient(to top, #111022, #1c0522);
+  color: #fff;
+}
+
+.sec .sec__h2 {
+  font-family: "Raleway";
+  font-size: 2.5em;
+}
+.sec p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.About {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.About section {
+  margin-bottom: 20px;
+}
+
+.skills {
+  background-color: #281e2d;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skills__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.skills .skills__list {
+  list-style-type: none;
+  padding: 0;
+  font-weight: bold;
+}
+.skills .skills__item {
+  display: flex;
+  flex-direction: row;
+}
+.skills .skills__icon {
+  padding-right: 10px;
+  padding-bottom: 5px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.education {
+  font-size: 1.1em;
+}
+.education ul {
+  list-style: none;
+}
+.education a {
+  color: white;
+}
+
+#box {
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#box .ava {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 50%;
+  border: #1c0522 10px solid;
+}
+
+.gradient-border {
+  --borderWidth: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 230px;
+  width: 230px;
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: 50%;
+  z-index: 1;
+  animation: animatedGradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedGradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+#works h3 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#works .projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#works .project {
+  background-color: #30256E;
+  border: 3px solid #433B6E;
+  border-radius: 5%;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  max-width: 400px;
+  max-height: 650px;
+  margin-bottom: 50px;
+}
+#works .project__image {
+  border-radius: 5%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+#works button {
+  outline: none;
+  border: none;
+}
+#works .btn-link {
+  text-decoration: none;
+  width: 100px;
+  height: 50px;
+  margin-bottom: 10px;
+  background-color: #09BA78;
+  border: 2px solid #0B6E49;
+  border-radius: 5px;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #F7F7F7;
+  cursor: pointer;
+}
+#works .btn-link:hover {
+  background-color: #E39128;
+}
+
+#contact h3 {
+  margin: 15px 0;
+}
+#contact .contacts__list {
+  list-style: none;
+}
+#contact .contacts__list .contact {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#contact .contact__icon {
+  margin-right: 15px;
+  width: 30px;
+  filter: invert(100%);
+}
+#contact a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  z-index: 1;
+}
+#contact a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.07em;
+  height: 0.1em;
+  width: 100%;
+  background: linear-gradient(110deg, #e1f549, #29d0be, #6cb8ea, #ff5959);
+  z-index: -1;
+  transition: width 0.25s cubic-bezier(0.6, 0, 0.4, 1);
+}
+#contact a:hover::after {
+  width: 1%;
+}
+
+#footer {
+  height: 150px;
+  width: 100%;
+  background: linear-gradient(to top, #17171c, #111022);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2em;
+}
+#footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(#2b1055, #7597de);
+}
+
+/*# sourceMappingURL=main.css.map */

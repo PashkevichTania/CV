@@ -1,0 +1,42 @@
+#contact{
+  h3{
+    margin: 15px 0;
+  }
+  .contacts__list{
+    list-style: none;
+    .contact{
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  .contact__icon {
+    margin-right: 15px;
+    width: 30px;
+    filter: invert(100%);
+  }
+  a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    z-index: 1;
+  }
+
+  a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: .07em;
+    height: .1em;
+    width: 100%;
+    background: linear-gradient(110deg, #e1f549, #29d0be, #6cb8ea, #ff5959);
+    z-index: -1;
+    transition: width .25s cubic-bezier(.6,0,.4,1);
+  }
+
+  a:hover::after {
+    width: 1%;
+  }
+}
