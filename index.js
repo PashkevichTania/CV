@@ -5,11 +5,18 @@ let mountains_front = document.getElementById('mountains_front');
 let btn = document.getElementById('btn');
 let text = document.getElementById('text');
 let header = document.getElementById('header');
+let progressBar = document.getElementById('progress-bar');
 
 window.addEventListener('scroll', function () {
     let value = window.scrollY;
     //console.log(value)
-    value>600? header.classList.add('header__active') : header.classList.remove('header__active')
+    value > 600 ? header.classList.add('header__active') : header.classList.remove('header__active')
+    let offset = window.pageYOffset || document.documentElement.scrollTop,
+        windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+        progress = Math.floor(offset / windowHeight * 100);
+
+    progressBar.style.width = (progress) + '%'
+
 
     stars.style.left = value * 0.25 + 'px';
     moon.style.top = value * 1.05 + 'px';

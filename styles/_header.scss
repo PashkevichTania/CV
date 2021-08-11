@@ -23,6 +23,16 @@
     Letter-spacing: 2px;
   }
 }
+#line{
+  position: absolute;
+  left: 0;
+  bottom: .07em;
+  height: .1em;
+  width: 0%;
+  background: linear-gradient(110deg, #e1f549, #29d0be, #6cb8ea, #ff5959);
+  z-index: -1;
+  transition: width .25s cubic-bezier(.6,0,.4,1);
+}
 
 .nav__list {
   list-style: none;
