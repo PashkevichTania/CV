@@ -49,6 +49,9 @@
 }
 
 #btn {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+
   text-decoration: none;
   display: inline-block;
   padding: 8px 30px;
@@ -69,8 +72,13 @@
 
 
 .sec {
+  h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+  }
+
   .sec__h2 {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-size: 2.5em;
   }
 
