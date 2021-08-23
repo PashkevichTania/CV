@@ -1,4 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:200");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Verdana", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(#2b1055, #7597de);
+}
+
 .header__active {
   background-color: rgba(28, 5, 34, 0.9);
 }
@@ -18,6 +32,7 @@
   transition: all 0.7s;
 }
 #header .header__logo {
+  font-family: "Poppins", sans-serif;
   color: #fff;
   font-weight: 700;
   text-decoration: none;
@@ -53,6 +68,7 @@
   color: #2b1055;
 }
 .nav__list .nav__item a {
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
   padding: 6px 15px;
   color: #fff;
@@ -157,6 +173,8 @@
 }
 
 #btn {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
   text-decoration: none;
   display: inline-block;
   padding: 8px 30px;
@@ -179,8 +197,12 @@ h3 {
   margin-bottom: 10px;
 }
 
+.sec h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
 .sec .sec__h2 {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-size: 2.5em;
 }
 .sec p {
@@ -211,6 +233,7 @@ h3 {
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -416,6 +439,7 @@ h3 {
   }
   .project p {
     text-align: center;
+    font-size: 1em;
   }
 
   .project__image {
@@ -483,24 +507,10 @@ h3 {
   #footer {
     font-size: 1.5em;
   }
-
-  p {
+  #footer p {
     text-align: center;
     width: 50%;
   }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
-}
-
-body {
-  min-height: 100vh;
-  overflow-x: hidden;
-  background: linear-gradient(#2b1055, #7597de);
 }
 
 /*# sourceMappingURL=main.css.map */
