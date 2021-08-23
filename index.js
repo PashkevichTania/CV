@@ -1,11 +1,13 @@
-let stars = document.getElementById('stars');
-let moon = document.getElementById('moon');
-let mountains_back = document.getElementById('mountains_back');
-let mountains_front = document.getElementById('mountains_front');
-let btn = document.getElementById('btn');
-let text = document.getElementById('text');
-let header = document.getElementById('header');
-let progressBar = document.getElementById('progress-bar');
+const stars = document.getElementById('stars');
+const moon = document.getElementById('moon');
+const mountains_back = document.getElementById('mountains_back');
+const mountains_front = document.getElementById('mountains_front');
+const btn = document.getElementById('btn');
+const text = document.getElementById('text');
+const header = document.getElementById('header');
+const progressBar = document.getElementById('progress-bar');
+
+const menuBtn = document.getElementById('menu-btn');
 
 window.addEventListener('scroll', function () {
     let value = window.scrollY;
@@ -29,3 +31,15 @@ window.addEventListener('scroll', function () {
     //header.style.top = value * 0.5 + 'px'
     //mountains_front.style.top = value*0 + 'px';
 })
+
+menuBtn.addEventListener('click', function (){
+    console.log(header.classList)
+  if (header.classList.contains('active')){
+      header.classList.remove('active')
+      header.classList.add('hide')
+  }else {
+      header.classList.remove('hide')
+      header.classList.add('active')
+  }
+})
+

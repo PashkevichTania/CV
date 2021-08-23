@@ -8,6 +8,7 @@
   left: 0;
   right: 0;
   width: 100%;
+  height: 80px;
   padding: 30px 100px 10px 100px;
   display: flex;
   justify-content: space-between;
@@ -33,6 +34,11 @@
   z-index: -1;
   transition: width .25s cubic-bezier(.6,0,.4,1);
 }
+#nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 .nav__list {
   list-style: none;
@@ -56,3 +62,55 @@
   }
 }
 
+#menu-btn{
+  width: 30px;
+  height: 30px;
+  filter: invert(100%);
+  display: none;
+}
+#header.active{
+  #menu-btn{
+    background-image: url("../assets/svg/cross-svgrepo-com.svg");
+  }
+}
+#header.hide{
+  #menu-btn{
+    background-image: url("../assets/svg/menu-bars-svgrepo-com.svg");
+  }
+}
+
+
+@media screen and (max-width:640px) {
+
+  #menu-btn{
+    display: block;
+  }
+  #header.active{
+    height: 100px;
+    padding: 10px 50px 50px 50px;
+    .nav__list{
+      display: flex;
+    }
+  }
+  #header.hide{
+    height: 60px;
+    padding: 20px 50px;
+    .nav__list{
+      display: none;
+    }
+  }
+  .nav__list {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    justify-content: space-around;
+    .nav__item {
+
+      a {
+        padding: 6px 15px;
+        margin-left: 0px;
+      }
+    }
+  }
+}

@@ -96,3 +96,21 @@
   }
 }
 
+
+
+@media screen and (max-width:400px) {
+  .project{
+    p{
+      text-align: center;
+    }
+    width: 200px!important;
+    height: 350px!important;
+    margin: 20px!important;
+
+  }
+  .project__image{
+    width: 200px!important;
+    height: 200px!important;
+  }
+
+}
