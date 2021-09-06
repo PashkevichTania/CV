@@ -38,7 +38,7 @@ let str = prompt('Введите строку');
             alert("Строка не палиндром");
         }
 ```
-#### My current English level is C1-C2, and I'm constantly trying to improve it.
+#### My current English level is B1-B2, and I'm constantly trying to improve it.
 I can easily read books and understand english speech.
 
 #### Skills
