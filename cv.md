@@ -7,7 +7,7 @@ My CV page: [https://pashkevichtania.github.io/CV/](https://pashkevichtania.gith
 * [LinkedIn](https://www.linkedin.com/in/tatsiana-pashkevich-64b760208/)
 * [VK](https://vk.com/id222248841)
 
-My name is Tanya, right now I'm 20 years old and I'm 3rd year student at Gomel State University. My major is in math and physics. My speciality is programming microcontrollers.
+My name is Tanya, right now I'm 21 years old and I'm 3rd year student at Gomel State University. My major is in math and physics. My speciality is programming microcontrollers.
 My goal is to be a frontend developer.
 
 ### My strengths are: 
@@ -19,9 +19,10 @@ My goal is to be a frontend developer.
 #### I have experience in
 * HTML
 * CSS
-* Java Script
+* JavaScript
+* TypeScript
+* React
 * Python
-* Basic Java
 * Git
 
 I also have some experince working with django framework and Vue.
@@ -44,3 +45,4 @@ I can easily read books and understand english speech.
 * [HTML course](https://www.sololearn.com/Certificate/1014-15448056/jpg/)
 * [CSS course](https://www.sololearn.com/Certificate/1023-15448056/jpg/)
 * [English EF SET test](https://www.efset.org/cert/Fyfv6R)
+* [RSS React course](https://app.rs.school/certificate/qu0q78vp)
