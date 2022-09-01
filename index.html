@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pashkevich Tania CV</title>
   <link href="styles/main.css" rel="stylesheet">
-  <link href="styles/prism.css" rel="stylesheet">
+  <link href="prism/prism.css" rel="stylesheet">
 </head>
 <body>
 <header id="header" class="hide">
@@ -35,7 +35,7 @@
   <div class="sec" id="sec">
     <div id="box">
       <div class="gradient-border">
-        <img alt="avatar picture" class="ava" src="assets/ava.jpg">
+        <img alt="avatar picture" class="ava" src="assets/ava.jpeg">
       </div>
       <h2 class="sec__h2">Tatsiana Pashkevich</h2>
     </div>
@@ -43,9 +43,9 @@
       <section>
         <h3>About me</h3>
         <p>
-          My name is Tanya, right now I'm 21 years old and I'm 4rd year student at Gomel State
-          University. My speciality is programming microcontrollers. My goal is to be a frontend
-          developer.
+          I’m а Front End Developer with experience in the React, Svelte and Vue development and web design.
+          My goal is to create powerful and user-friendly web applications and improving myself in this every day.
+          And I’d like to do what I’m interested in - creation of something useful for people.
         </p>
       </section>
       <section>
@@ -62,11 +62,76 @@
         <h3>Code examples</h3>
         <div class="code">
           <pre>
-            <code class="language-javascript">function squareDigits(num){
-              let digits = num.toString().split('');
-              let map = digits.map(x => (+x) * (+x));
-              return +map.join('');
-            }</code>
+            <code class="language-typescript match-braces rainbow-braces">
+export function debounce&lt;A extends any[], R extends any&gt;(
+  _target: Object,
+  _propertyKey: string | symbol,
+  descriptor: TypedPropertyDescriptor&lt;(...args: A) =&gt; R&gt;
+) {
+  const fn = descriptor.value!
+
+  let isUsing = false
+
+  return {
+    ...descriptor,
+    async value(...args: A): Promise&lt;Awaited&lt;R&gt;&gt; {
+      if (isUsing) throw new Error("The function call is in progress")
+
+      try {
+        isUsing = true
+        return await fn.call(this, ...args)
+      } finally {
+        isUsing = false
+      }
+    },
+  }
+}
+            </code>
+          </pre>
+          <pre>
+            <code class="language-typescript match-braces rainbow-braces">
+import { CACHE_NAME } from "./constants"
+
+// https://github.com/microsoft/TypeScript/issues/14877#issuecomment-1057795918
+declare const self: ServiceWorkerGlobalScope
+
+self.addEventListener("install", () => {
+  self.skipWaiting()
+  console.debug("service worker has been installed")
+})
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(self.clients.claim())
+  console.debug("service worker has been activated", CACHE_NAME)
+})
+
+self.addEventListener("fetch", (event) => {
+  const { request } = event
+  const { clientId } = event
+
+  if (request.method !== "GET") return
+
+    event.respondWith(
+      caches.match(request, { cacheName: CACHE_NAME }).then(
+        (response) =>
+          response ||
+          fetch(request).then(() =>
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(request, response!.clone()).then(() =>
+                self.clients.get(clientId).then((client) =>
+                  client!.postMessage({
+                    type: "cached",
+                    payload: request.url,
+                  })
+                )
+              )
+              return response!
+            })
+          )
+      )
+    )
+})
+            </code>
           </pre>
         </div>
       </section>
@@ -86,19 +151,19 @@
               <img alt="JavaScript" class="skills__icon" src="assets/svg/icons/javascript.svg"/>
               <span>JavaScript</span>
             </li>
+            <li class="skills__item">
+              <img alt="typescript" class="skills__icon" src="assets/svg/icons/typescriptlang-icon.svg"/>
+              <span>TypeScript</span>
+            </li>
           </ul>
           <ul>
-            <li class="skills__item">
-              <img alt="react" class="skills__icon" src="assets/svg/icons/react.svg"/>
-              <span>React</span>
-            </li>
             <li class="skills__item">
               <img alt="SASS" class="skills__icon" src="assets/svg/icons/sass.svg"/>
               <span>SASS/SCSS</span>
             </li>
             <li class="skills__item">
-              <img alt="typescript" class="skills__icon" src="assets/svg/icons/typescriptlang-icon.svg"/>
-              <span>TypeScript</span>
+              <img alt="react" class="skills__icon" src="assets/svg/icons/react.svg"/>
+              <span>React</span>
             </li>
           </ul>
           <ul class="skills__list">
@@ -250,6 +315,6 @@
   <p>&#169 Pashkevich Tatsiana 2021</p>
 </footer>
 <script src="index.js"></script>
-<script src="prism.js"></script>
+<script src="/prism/prism.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
-.header__active{
-  background-color: rgba(28,5, 34,0.9);
+.header__active {
+  background-color: rgba(28, 5, 34, 0.9);
 }
 
 #header {
@@ -14,26 +14,26 @@
   justify-content: space-between;
   align-items: center;
   z-index: 100000;
-  transition: all .7s;
+  transition: all 0.7s;
 
   .header__logo {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #fff;
     font-weight: 700;
     text-decoration: none;
     font-size: 2em;
-    Letter-spacing: 2px;
+    letter-spacing: 2px;
   }
 }
-#progress-bar{
+#progress-bar {
   position: absolute;
   left: 0;
-  bottom: .07em;
-  height: .1em;
+  bottom: 0.07em;
+  height: 0.1em;
   width: 0%;
   background: linear-gradient(110deg, #e1f549, #29d0be, #6cb8ea, #ff5959);
   z-index: -1;
-  transition: width .25s cubic-bezier(.6,0,.4,1);
+  transition: width 0.25s cubic-bezier(0.6, 0, 0.4, 1);
 }
 #nav {
   display: flex;
@@ -54,7 +54,7 @@
     }
 
     a {
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
       text-decoration: none;
       padding: 6px 15px;
       color: #fff;
@@ -64,40 +64,38 @@
   }
 }
 
-#menu-btn{
+#menu-btn {
   width: 30px;
   height: 30px;
   filter: invert(100%);
   display: none;
 }
-#header.active{
-  #menu-btn{
+#header.active {
+  #menu-btn {
     background-image: url("../assets/svg/cross-svgrepo-com.svg");
   }
 }
-#header.hide{
-  #menu-btn{
+#header.hide {
+  #menu-btn {
     background-image: url("../assets/svg/menu-bars-svgrepo-com.svg");
   }
 }
 
-
-@media screen and (max-width:640px) {
-
-  #menu-btn{
+@media screen and (max-width: 640px) {
+  #menu-btn {
     display: block;
   }
-  #header.active{
+  #header.active {
     height: 100px;
     padding: 10px 50px 50px 50px;
-    .nav__list{
+    .nav__list {
       display: flex;
     }
   }
-  #header.hide{
+  #header.hide {
     height: 60px;
     padding: 20px 50px;
-    .nav__list{
+    .nav__list {
       display: none;
     }
   }
@@ -108,7 +106,6 @@
     width: 100%;
     justify-content: space-around;
     .nav__item {
-
       a {
         padding: 6px 15px;
         margin-left: 0px;

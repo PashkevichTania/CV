@@ -37,7 +37,7 @@ body {
   font-weight: 700;
   text-decoration: none;
   font-size: 2em;
-  Letter-spacing: 2px;
+  letter-spacing: 2px;
 }
 
 #progress-bar {
@@ -95,7 +95,6 @@ body {
   #menu-btn {
     display: block;
   }
-
   #header.active {
     height: 100px;
     padding: 10px 50px 50px 50px;
@@ -103,7 +102,6 @@ body {
   #header.active .nav__list {
     display: flex;
   }
-
   #header.hide {
     height: 60px;
     padding: 20px 50px;
@@ -111,7 +109,6 @@ body {
   #header.hide .nav__list {
     display: none;
   }
-
   .nav__list {
     position: absolute;
     left: 0;
@@ -124,6 +121,28 @@ body {
     margin-left: 0px;
   }
 }
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234)) #1B0723;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1B0723;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234));
+  border-radius: 12px;
+  border: 3px solid #1B0723;
+}
+
 .section_img {
   position: relative;
   width: 100%;
@@ -148,7 +167,7 @@ body {
 .section_img img {
   position: absolute;
   top: 0;
-  Left: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -218,6 +237,34 @@ h3 {
 }
 .About section {
   margin-bottom: 20px;
+}
+
+.code {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  /* Chrome, Edge, and Safari */
+}
+.code pre {
+  max-height: 550px;
+  overflow: auto;
+}
+.code * {
+  scrollbar-color: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234)) #272822;
+}
+.code *::-webkit-scrollbar {
+  width: 12px;
+}
+.code *::-webkit-scrollbar-track {
+  background: #272822;
+}
+.code *::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  border: 3px solid #272822;
 }
 
 .skills {
@@ -310,14 +357,12 @@ h3 {
   .section_text {
     padding: 50px;
   }
-
   #box {
     flex-direction: column;
   }
   #box .gradient-border {
     margin-bottom: 20px;
   }
-
   .skills {
     background-color: #281e2d;
     padding: 15px;
@@ -357,7 +402,7 @@ h3 {
 }
 #works .project {
   position: relative;
-  background-color: #160C22;
+  background-color: #160c22;
   text-align: center;
   color: white;
   width: 300px;
@@ -367,13 +412,14 @@ h3 {
 #works .project span {
   position: absolute;
   top: 0;
-  Left: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: #140D22;
+  background: #140d22;
   z-index: 10;
 }
-#works .project img, #works .project figcaption {
+#works .project img,
+#works .project figcaption {
   position: relative;
   z-index: 10;
 }
@@ -423,7 +469,7 @@ h3 {
   font-size: 20px;
   line-height: 27px;
   text-align: center;
-  color: #F7F7F7;
+  color: #f7f7f7;
   cursor: pointer;
 }
 #works .btn-link:hover {
@@ -441,7 +487,6 @@ h3 {
     text-align: center;
     font-size: 1em;
   }
-
   .project__image {
     width: 200px !important;
     height: 200px !important;

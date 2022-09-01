@@ -1,4 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
+
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234)) #1B0723;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 13px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #1B0723;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234));
+    border-radius: 12px;
+    border: 3px solid #1B0723;
+  }
+
 
 .section_img {
   position: relative;
@@ -12,7 +36,7 @@
 }
 
 .section_img::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -24,7 +48,7 @@
 .section_img img {
   position: absolute;
   top: 0;
-  Left: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -49,7 +73,7 @@
 }
 
 #btn {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: bold;
 
   text-decoration: none;
@@ -70,7 +94,7 @@
   color: #fff;
 }
 
-h3{
+h3 {
   margin-bottom: 10px;
 }
 .sec {
@@ -80,7 +104,7 @@ h3{
   }
 
   .sec__h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 2.5em;
   }
 
@@ -89,9 +113,9 @@ h3{
     margin-bottom: 10px;
   }
 }
-.About{
+.About {
   margin-top: 100px;
-  section{
+  section {
     margin-bottom: 20px;
   }
 
@@ -99,7 +123,38 @@ h3{
   flex-direction: column;
   text-align: start;
 }
-.skills{
+.code {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  pre {
+    max-height: 550px;
+    overflow: auto;
+  }
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-color: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234)) #272822;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #272822;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    border: 3px solid #272822;
+  }
+}
+.skills {
   background-color: #281e2d;
   padding: 15px;
   border-radius: 15px;
@@ -108,7 +163,7 @@ h3{
   align-items: center;
   justify-content: center;
 
-  .skills__container{
+  .skills__container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -117,16 +172,16 @@ h3{
     align-items: center;
   }
 
-  .skills__list{
+  .skills__list {
     list-style-type: none;
     padding: 0;
     font-weight: bold;
   }
-  .skills__item{
+  .skills__item {
     display: flex;
     flex-direction: row;
   }
-  .skills__icon{
+  .skills__icon {
     padding-right: 10px;
     padding-bottom: 5px;
     display: inline-block;
@@ -137,7 +192,7 @@ h3{
 
 .education {
   font-size: 1.1em;
-  ul{
+  ul {
     list-style: none;
   }
   a {
@@ -154,8 +209,7 @@ h3{
   justify-content: space-around;
   align-items: center;
 
-
-  .ava{
+  .ava {
     width: 210px;
     height: 210px;
     object-fit: cover;
@@ -163,7 +217,6 @@ h3{
     border-radius: 50%;
     border: #1c0522 10px solid;
   }
-
 }
 
 .gradient-border {
@@ -174,14 +227,22 @@ h3{
 
   height: 230px;
   width: 230px;
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
   border-radius: 50%;
   z-index: 1;
   animation: animatedGradient 3s ease alternate infinite;
   background-size: 300% 300%;
-
 }
-
 
 @keyframes animatedGradient {
   0% {
@@ -195,19 +256,17 @@ h3{
   }
 }
 
-
-
-@media screen and (max-width:640px) {
+@media screen and (max-width: 640px) {
   .section_text {
     padding: 50px;
   }
   #box {
     flex-direction: column;
-    .gradient-border{
+    .gradient-border {
       margin-bottom: 20px;
     }
   }
-  .skills{
+  .skills {
     background-color: #281e2d;
     padding: 15px;
     border-radius: 15px;
@@ -216,19 +275,19 @@ h3{
     align-items: center;
     justify-content: center;
 
-    .skills__container{
+    .skills__container {
       padding: 10px 20px;
       flex-direction: column;
       align-items: flex-start;
     }
   }
 }
-@media screen and (max-width:400px) {
+@media screen and (max-width: 400px) {
   .section_text {
-    h2{
+    h2 {
       text-align: center;
     }
-    p{
+    p {
       text-align: justify;
     }
     padding: 20px;

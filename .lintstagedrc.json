@@ -1,0 +1,3 @@
+{
+  "**/*.{js,html,json}": ["npx prettier --ignore-unknown --write"]
+}
