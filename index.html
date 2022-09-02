@@ -250,65 +250,79 @@ self.addEventListener("fetch", (event) => {
       </section>
       <section id="works">
         <h3>My works</h3>
+        <h2>Commercial projects</h2>
         <div class="projects">
           <figure class="project">
             <span></span>
-            <img src="assets/works/zoo.png" alt="zoo" class="project__image">
+            <img src="assets/works/commercial/statval.png" alt="statval" class="project__image">
             <figcaption>
-              <p class="cards__title">Online zoo website</p>
-              <button type="button"
-                      onclick="location.href='https://romantic-mestorf-690cd1.netlify.app'"
-                      class="btn-link">Link</button>
+              <h4 class="cards__title">Statval</h4>
+              <div class="btn-container">
+                <a href="https://statval.com/" class="btn-link">Demo link</a>
+              </div>
             </figcaption>
           </figure>
           <figure class="project">
             <span></span>
-            <img src="assets/works/piano.jpg" alt="piano" class="project__image">
+            <img src="assets/works/commercial/beauty.png" alt="beauty" class="project__image">
             <figcaption>
-              <p class="cards__title">Virtual piano</p>
-              <button type="button"
-                      onclick="location.href='https://rolling-scopes-school.github.io/pashkevichtania-JSFE2021Q1/virtual-piano/'"
-                      class="btn-link">Link</button>
+              <h4 class="cards__title">WebAR Beauty</h4>
+              <div class="btn-container">
+                <a href="https://cdn.sdk-webar-demo.on.banuba.net/beauty-web/index.html#/" class="btn-link">Demo link</a>
+              </div>
             </figcaption>
           </figure>
           <figure class="project">
             <span></span>
-            <img src="assets/works/eng.png" alt="cite" class="project__image">
+            <img src="assets/works/commercial/whoosh.png" alt="whoosh" class="project__image">
             <figcaption>
-              <p class="cards__title">English Learning app for kids</p>
-              <button type="button"
-                      onclick="location.href='https://pashkevichtania-english-for-kids.netlify.app'"
-                      class="btn-link">Link</button>
+              <h4 class="cards__title">Whoosh</h4>
+              <div class="btn-container">
+                <a href="https://app.whooshcall.com/" class="btn-link">Demo link</a>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+        <h2>Demo and learning projects</h2>
+        <div class="projects">
+          <figure class="project">
+            <span></span>
+            <img src="assets/works/demo/zoo.png" alt="zoo" class="project__image">
+            <figcaption>
+              <h4 class="cards__title">Online zoo website</h4>
+              <div class="btn-container">
+                <a href="https://romantic-mestorf-690cd1.netlify.app" class="btn-link">Demo link</a>
+              </div>
             </figcaption>
           </figure>
           <figure class="project">
             <span></span>
-            <img src="assets/works/rielt.jpg" alt="cite" class="project__image">
+            <img src="assets/works/demo/piano.jpg" alt="piano" class="project__image">
             <figcaption>
-              <p class="cards__title">Website of a real estate company </p>
-              <button type="button"
-                      onclick="location.href='http://qwerty83468.pythonanywhere.com'"
-                      class="btn-link">Link</button>
+              <h4 class="cards__title">Virtual piano</h4>
+              <div class="btn-container">
+                <a href="https://rolling-scopes-school.github.io/pashkevichtania-JSFE2021Q1/virtual-piano/" class="btn-link">Demo link</a>
+              </div>
             </figcaption>
           </figure>
           <figure class="project">
             <span></span>
-            <img src="assets/works/vueweather.png" alt="cite" class="project__image">
+            <img src="assets/works/demo/match-match.png" alt="cite" class="project__image">
             <figcaption>
-              <p class="cards__title">Vue weather web-app</p>
-              <button type="button"
-                      onclick="location.href='https://flamboyant-shannon-3d3acb.netlify.app/#/'"
-                      class="btn-link">Link</button>
+              <h4 class="cards__title">Match-match game</h4>
+              <div class="btn-container">
+                <a href="https://rolling-scopes-school.github.io/pashkevichtania-JSFE2021Q1/match-match-game/dist/" class="btn-link">Demo link</a>
+              </div>
             </figcaption>
           </figure>
           <figure class="project">
             <span></span>
-            <img src="assets/works/match-match.png" alt="cite" class="project__image">
+            <img src="assets/works/demo/eng.png" alt="cite" class="project__image">
             <figcaption>
-              <p class="cards__title">Match-match game</p>
-              <button type="button"
-                      onclick="location.href='https://rolling-scopes-school.github.io/pashkevichtania-JSFE2021Q1/match-match-game/dist/'"
-                      class="btn-link">Link</button>
+              <h4 class="cards__title">English Learning app for kids</h4>
+              <div class="btn-container">
+                <a href="https://pashkevichtania-english-for-kids.netlify.app" class="btn-link">Demo link</a>
+              </div>
             </figcaption>
           </figure>
         </div>
@@ -317,20 +331,28 @@ self.addEventListener("fetch", (event) => {
         <h3>Contact information:</h3>
         <ul class="contacts__list">
           <li class="contact">
-            <img src="assets/social/gmail.svg" alt="gmail" class="contact__icon">
-            <a href="mailto:pashkevichtania2004@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+            <a href="mailto:pashkevichtania2004@gmail.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/social/gmail.svg" alt="gmail" class="contact__icon">
+              <span>Email</span>
+            </a>
           </li>
           <li class="contact">
-            <img src="assets/social/linkedin-logo.svg" alt="linkedin" class="contact__icon">
-            <a href="https://www.linkedin.com/in/tatsiana-pashkevich-64b760208/">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/tatsiana-pashkevich-64b760208/">
+              <img src="assets/social/linkedin-logo.svg" alt="linkedin" class="contact__icon">
+              <span>LinkedIn</span>
+              </a>
           </li>
           <li class="contact">
-            <img src="assets/social/github.svg" alt="github" class="contact__icon">
-            <a href="https://github.com/PashkevichTania">GitHub</a>
+            <a href="https://github.com/PashkevichTania">
+              <img src="assets/social/github.svg" alt="github" class="contact__icon">
+              <span>GitHub</span>
+              </a>
           </li>
           <li class="contact">
-            <img src="assets/social/vk-logo.svg" alt="vk" class="contact__icon">
-            <a href="https://vk.com/id222248841">VK</a>
+            <a href="https://vk.com/id222248841">
+              <img src="assets/social/vk-logo.svg" alt="vk" class="contact__icon">
+              <span>VK</span>
+            </a>
           </li>
         </ul>
       </section>
@@ -339,7 +361,7 @@ self.addEventListener("fetch", (event) => {
 </section>
 <footer id="footer">
   <a href="https://github.com/PashkevichTania" class="link">GitHub</a>
-  <p>&#169 Pashkevich Tatsiana 2021</p>
+  <p>&#169 Pashkevich Tatsiana 2022</p>
 </footer>
 <script src="index.js"></script>
 <script src="/prism/prism.js"></script>
