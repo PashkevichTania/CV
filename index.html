@@ -251,37 +251,89 @@ self.addEventListener("fetch", (event) => {
       <section id="works">
         <h3>My works</h3>
         <h2>Commercial projects</h2>
-        <div class="projects">
-          <figure class="project">
-            <span></span>
-            <img src="assets/works/commercial/statval.png" alt="statval" class="project__image">
-            <figcaption>
-              <h4 class="cards__title">Statval</h4>
-              <div class="btn-container">
-                <a href="https://statval.com/" class="btn-link">Demo link</a>
+        <div class="projects__commercial">
+          <div class="container">
+            <input type="radio" name="slider" id="item-1" checked>
+            <input type="radio" name="slider" id="item-2">
+            <input type="radio" name="slider" id="item-3">
+            <div class="cards">
+              <label class="card" for="item-1" id="project-1">
+                <h4 class="cards__title">Statval</h4>
+                <img src="assets/works/commercial/statval.png" alt="statval" class="project__image">
+                <div class="btn-container">
+                  <a href="https://statval.com/" class="btn-link">Demo link</a>
+                </div>
+              </label>
+              <label class="card" for="item-2" id="project-2">
+                <h4 class="cards__title">WebAR Beauty</h4>
+                <img src="assets/works/commercial/beauty.png" alt="beauty" class="project__image">
+                <div class="btn-container">
+                  <a href="https://cdn.sdk-webar-demo.on.banuba.net/beauty-web/index.html#/" class="btn-link">Demo link</a>
+                </div>
+              </label>
+              <label class="card" for="item-3" id="project-3">
+                <h4 class="cards__title">Whoosh</h4>
+                <img src="assets/works/commercial/whoosh.png" alt="whoosh" class="project__image">
+                <div class="btn-container">
+                  <a href="https://app.whooshcall.com/" class="btn-link">Demo link</a>
+                </div>
+              </label>
+            </div>
+            <div class="player">
+              <div class="upper-part">
+                <div class="info-area" id="test">
+                  <label class="project-info" id="project-info-1">
+                    <p><span>Description: </span>SPA and PWA built on React. The application serves as a resource for real estate valuation. </p>
+                    <p><span>Technologies: </span>React, React query, Bing maps, Styled Components.</p>
+                    <p><span>Time: </span>6 months</p>
+                    <p><span>Responsibilities: </span>
+                      <ul>
+                    <li>Development</li>
+                    <li>Maintenance</li>
+                    <li>Writing auto-tests</li>
+                    <li>Testing and bug fixing</li>
+                    <li>Implementing new features</li>
+                    <li>Engineering app architecture</li>
+                    <li>Approach structure and business rules</li>
+                  </ul>
+                    </p>
+                  </label>
+                  <label class="project-info" id="project-info-2">
+                    <p><span>Description: </span>SPA app for demo preview and testing WebAR beauty effects, with possibility of exporting applied effects presets. </p>
+                    <p><span>Technologies: </span>JavaScript, VUE, WebAR SDK, Bulma, Buefy.</p>
+                    <p><span>Time: </span>4 months</p>
+                    <p><span>Responsibilities: </span>
+                    <ul>
+                      <li>Development</li>
+                      <li>Maintenance</li>
+                      <li>Writing auto-tests</li>
+                      <li>Testing and bug fixing</li>
+                      <li>Implementing new features</li>
+                      <li>Engineering app architecture</li>
+                      <li>Approach structure and business rules</li>
+                    </ul>
+                    </p>
+                  </label>
+                  <label class="project-info" id="project-info-3">
+                    <p><span>Description: </span>Video conferencing app with webAR SDK and a lot of features.</p>
+                    <p><span>Technologies: </span>TypeScript, WebRTC, WebAR SDK, Svelte, Canvas, Cypress, Playwright,  Flutter.</p>
+                    <p><span>Time: </span>1 year</p>
+                    <p><span>Responsibilities: </span>
+                    <ul>
+                      <li>Development</li>
+                      <li>Maintenance</li>
+                      <li>Writing auto-tests</li>
+                      <li>Testing and bug fixing</li>
+                      <li>Implementing new features</li>
+                      <li>Engineering app architecture</li>
+                      <li>Approach structure and business rules</li>
+                    </ul>
+                    </p>
+                  </label>
+                </div>
               </div>
-            </figcaption>
-          </figure>
-          <figure class="project">
-            <span></span>
-            <img src="assets/works/commercial/beauty.png" alt="beauty" class="project__image">
-            <figcaption>
-              <h4 class="cards__title">WebAR Beauty</h4>
-              <div class="btn-container">
-                <a href="https://cdn.sdk-webar-demo.on.banuba.net/beauty-web/index.html#/" class="btn-link">Demo link</a>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="project">
-            <span></span>
-            <img src="assets/works/commercial/whoosh.png" alt="whoosh" class="project__image">
-            <figcaption>
-              <h4 class="cards__title">Whoosh</h4>
-              <div class="btn-container">
-                <a href="https://app.whooshcall.com/" class="btn-link">Demo link</a>
-              </div>
-            </figcaption>
-          </figure>
+            </div>
+          </div>
         </div>
         <h2>Demo and learning projects</h2>
         <div class="projects">
