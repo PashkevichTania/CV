@@ -550,12 +550,18 @@ h3 {
   width: 100%;
   display: block;
   overflow: auto;
+  font-weight: 400;
+}
+#works .projects__commercial .project-info span {
+  font-weight: 600;
+}
+#works .projects__commercial .project-info ul {
+  margin-left: 15px;
 }
 #works .projects__commercial .info-area {
   width: 100%;
   position: absolute;
   top: 0;
-  left: 30px;
   transition: transform 0.4s ease-in;
 }
 #works .projects__commercial #item-2:checked ~ .player #test {

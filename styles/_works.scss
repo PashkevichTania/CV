@@ -118,14 +118,19 @@
       width: 100%;
       display: block;
       overflow: auto;
+      font-weight: 400;
+      span{
+        font-weight: 600;
+      }
+      ul {
+        margin-left: 15px;
+      }
     }
-
 
     .info-area {
       width: 100%;
       position: absolute;
       top: 0;
-      left: 30px;
       transition: transform .4s ease-in;
     }
 
