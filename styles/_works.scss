@@ -40,6 +40,7 @@
       cursor: pointer;
       background: #01030c;
       border-radius: 16px;
+      overflow: hidden;
     }
     .container {
       width: 100%;
@@ -56,17 +57,29 @@
       height: 100%;
       margin-bottom: 20px;
     }
-    .cards__title {
+    .hover-bg{
+      visibility: hidden;
+      opacity: 0;
+      background: #01030c;
+      padding: 20px;
+      transition: all 1s ease-out;
+      div, h4{
+        margin: 0;
+      }
+    }
+    .hover-bg.top-bg{
       position: absolute;
       left: 50%;
       top: 5%;
       transform: translate(-50%, -50%);
+      border-radius: 0 0 16px 16px;
     }
-    .btn-container{
+    .hover-bg.bottom-bg{
       position: absolute;
       left: 50%;
-      bottom: -2%;
+      bottom: -7%;
       transform: translate(-50%, -50%);
+      border-radius: 16px 16px 0 0;
     }
     img {
       width: 100%;
@@ -91,9 +104,10 @@
       transform: translatex(0) scale(1);
       opacity: 1;
       z-index: 1;
-
-      img {
-        box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+      box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+      &:hover > .hover-bg{
+        opacity: 1;
+        visibility: visible;
       }
     }
 
