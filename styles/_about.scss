@@ -19,17 +19,18 @@
     max-height: 550px;
     overflow: auto;
   }
-  code{
-    *,span{
-      font-family: "Courier", Consolas, Monaco,
-      "Andale Mono", "Ubuntu Mono", monospace !important;
+  code {
+    *,
+    span {
+      font-family: "Courier", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
     }
   }
 
   /* ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
-    scrollbar-color: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234)) #272822;
+    scrollbar-color: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234))
+      #272822;
   }
 
   /* Chrome, Edge, and Safari */
@@ -72,7 +73,7 @@
     padding: 0;
   }
   .skills__header {
-    color: #6ABA98;
+    color: #6aba98;
     text-align: center;
     font-weight: 600;
     margin-bottom: 10px;

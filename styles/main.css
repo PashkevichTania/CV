@@ -64,7 +64,7 @@ h4 {
 /* Firefox */
 * {
   scrollbar-width: auto;
-  scrollbar-color: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234)) #1B0723;
+  scrollbar-color: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234)) #1b0723;
 }
 
 /* Chrome, Edge, and Safari */
@@ -73,12 +73,12 @@ h4 {
 }
 
 *::-webkit-scrollbar-track {
-  background: #1B0723;
+  background: #1b0723;
 }
 
 *::-webkit-scrollbar-thumb {
   border-radius: 12px;
-  border: 3px solid #1B0723;
+  border: 3px solid #1b0723;
 }
 *::-webkit-scrollbar-thumb:horizontal {
   background: linear-gradient(45deg, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234));
@@ -88,7 +88,7 @@ h4 {
 }
 
 *::-webkit-scrollbar-corner {
-  background: #1B0723;
+  background: #1b0723;
 }
 
 .header__active {
@@ -384,7 +384,8 @@ h4 {
   max-height: 550px;
   overflow: auto;
 }
-.code code *, .code code span {
+.code code *,
+.code code span {
   font-family: "Courier", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
 }
 .code * {
@@ -426,7 +427,7 @@ h4 {
   padding: 0;
 }
 .skills .skills__header {
-  color: #6ABA98;
+  color: #6aba98;
   text-align: center;
   font-weight: 600;
   margin-bottom: 10px;
@@ -516,7 +517,8 @@ h4 {
   padding: 20px;
   transition: all 1s ease-out;
 }
-#works .projects__commercial .hover-bg div, #works .projects__commercial .hover-bg h4 {
+#works .projects__commercial .hover-bg div,
+#works .projects__commercial .hover-bg h4 {
   margin: 0;
 }
 #works .projects__commercial .hover-bg.top-bg {
@@ -539,28 +541,36 @@ h4 {
   border-radius: 10px;
   object-fit: contain;
 }
-#works .projects__commercial #item-1:checked ~ .cards #project-3, #works .projects__commercial #item-2:checked ~ .cards #project-1, #works .projects__commercial #item-3:checked ~ .cards #project-2 {
+#works .projects__commercial #item-1:checked ~ .cards #project-3,
+#works .projects__commercial #item-2:checked ~ .cards #project-1,
+#works .projects__commercial #item-3:checked ~ .cards #project-2 {
   transform: translatex(-40%) scale(0.8);
   opacity: 0.4;
   z-index: 0;
 }
-#works .projects__commercial #item-1:checked ~ .cards #project-2, #works .projects__commercial #item-2:checked ~ .cards #project-3, #works .projects__commercial #item-3:checked ~ .cards #project-1 {
+#works .projects__commercial #item-1:checked ~ .cards #project-2,
+#works .projects__commercial #item-2:checked ~ .cards #project-3,
+#works .projects__commercial #item-3:checked ~ .cards #project-1 {
   transform: translatex(40%) scale(0.8);
   opacity: 0.4;
   z-index: 0;
 }
-#works .projects__commercial #item-1:checked ~ .cards #project-1, #works .projects__commercial #item-2:checked ~ .cards #project-2, #works .projects__commercial #item-3:checked ~ .cards #project-3 {
+#works .projects__commercial #item-1:checked ~ .cards #project-1,
+#works .projects__commercial #item-2:checked ~ .cards #project-2,
+#works .projects__commercial #item-3:checked ~ .cards #project-3 {
   transform: translatex(0) scale(1);
   opacity: 1;
   z-index: 1;
   box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
 }
-#works .projects__commercial #item-1:checked ~ .cards #project-1:hover > .hover-bg, #works .projects__commercial #item-2:checked ~ .cards #project-2:hover > .hover-bg, #works .projects__commercial #item-3:checked ~ .cards #project-3:hover > .hover-bg {
+#works .projects__commercial #item-1:checked ~ .cards #project-1:hover > .hover-bg,
+#works .projects__commercial #item-2:checked ~ .cards #project-2:hover > .hover-bg,
+#works .projects__commercial #item-3:checked ~ .cards #project-3:hover > .hover-bg {
   opacity: 1;
   visibility: visible;
 }
 #works .projects__commercial .player {
-  background-color: #1B0723;
+  background-color: #1b0723;
   border-radius: 8px;
   min-width: 80%;
   height: 300px;
@@ -663,8 +673,8 @@ h4 {
   margin-top: 10px;
 }
 #works .cards__title {
-  background: #00CCFF;
-  background: linear-gradient(to right, #00CCFF 0%, #FF00FF 100%);
+  background: #00ccff;
+  background: linear-gradient(to right, #00ccff 0%, #ff00ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
