@@ -1,3 +1,5 @@
 # CV
 
-https://pashkevichtania.github.io/Web/
+A simple CV site.
+
+https://pashkevichtania.github.io/CV/
