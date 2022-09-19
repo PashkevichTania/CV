@@ -4,4 +4,4 @@
 **/node_modules
 
 *.min.*
-prism/**
+**/prism*
