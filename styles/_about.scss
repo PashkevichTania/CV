@@ -1,0 +1,103 @@
+.About {
+  margin-top: 100px;
+  section {
+    margin-bottom: 20px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.code {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  gap: 10px;
+  pre {
+    max-height: 550px;
+    overflow: auto;
+  }
+  code {
+    *,
+    span {
+      font-family: "Courier", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+    }
+  }
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-color: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234))
+      #272822;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #272822;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    border: 3px solid #272822;
+  }
+  *::-webkit-scrollbar-corner {
+    background: #272822;
+  }
+}
+.skills {
+  background-color: #281e2d;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .skills__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  .skills__list {
+    list-style-type: none;
+    padding: 0;
+  }
+  .skills__header {
+    color: #6aba98;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+  .skills__item {
+    display: flex;
+    flex-direction: row;
+  }
+  .skills__icon {
+    padding-right: 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.education {
+  font-size: 1.1em;
+  ul {
+    list-style: none;
+  }
+  a {
+    color: white;
+  }
+}

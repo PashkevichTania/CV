@@ -1,0 +1,66 @@
+@import "fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "San Francisco", "Verdana", sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(#2b1055, #7597de);
+}
+
+h1 {
+  font-weight: 700;
+}
+h2 {
+  font-weight: 600;
+}
+h3 {
+  font-weight: 500;
+}
+h4 {
+  font-weight: 500;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234)) #1b0723;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1b0723;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  border: 3px solid #1b0723;
+  &:horizontal {
+    background: linear-gradient(45deg, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234));
+  }
+  &:vertical {
+    background: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234));
+  }
+}
+*::-webkit-scrollbar-corner {
+  background: #1b0723;
+}
+
+@import "header";
+@import "home";
+@import "about";
+@import "works";
+@import "contacts";
+@import "footer";

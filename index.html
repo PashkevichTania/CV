@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pashkevich Tania CV</title>
+    <link href="styles/main.css" rel="stylesheet" />
+    <link href="prism/prism.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="header" class="hide">
+      <a class="header__logo" href="https://github.com/PashkevichTania"> GitHub </a>
+      <nav id="nav">
+        <div id="menu-btn"></div>
+        <ul class="nav__list">
+          <li class="nav__item"><a class="active" href="#">Home</a></li>
+          <li class="nav__item"><a href="#about">About</a></li>
+          <li class="nav__item"><a href="#works">Work</a></li>
+          <li class="nav__item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="progress-bar"></div>
+    </header>
+    <section class="section_img">
+      <img alt="stars background" id="stars" src="assets/bg/stars.png" />
+      <img alt="stars background" id="moon" src="assets/bg/moon.png" />
+      <img alt="stars background" id="mountains_back" src="assets/bg/mountains_behind.png" />
+      <h2 id="text">My Resume</h2>
+      <a href="#about" id="btn">Explore</a>
+      <img alt="stars background" id="mountains_front" src="assets/bg/mountains_front.png" />
+    </section>
+    <section class="section_text" id="about">
+      <div class="sec" id="sec">
+        <div id="box">
+          <div class="gradient-border">
+            <img alt="avatar picture" class="ava" src="assets/ava.jpeg" />
+          </div>
+          <h2 class="sec__h2">Tatsiana Pashkevich</h2>
+        </div>
+        <div class="About">
+          <section>
+            <h3>About me</h3>
+            <p>
+              I’m а front-end developer with experience in React, Svelte and Vue development and web
+              design. My goals are to create powerful and user-friendly web applications and to
+              improve myself in this every day. I like to do what I’m interested in - to create
+              something useful for people.
+            </p>
+          </section>
+          <section>
+            <h3>My strengths are:</h3>
+            <ul>
+              <li>Dedication, I am always eager to improve my skills and learn something new.</li>
+              <li>Teamwork, I good at collaborating and listening to others. Hardworking.</li>
+              <li>Fast learning.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Code examples</h3>
+            <div class="code">
+              <pre>
+            <code class="language-typescript match-braces rainbow-braces">
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import {getUsersAPI} from "services/home";
+
+export const fetchUsers = createAsyncThunk(
+  'api/fetchUsers',
+  async function (_, {rejectWithValue}) {
+    try {
+      return await getUsersAPI();
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+
+  }
+);
+
+const initialState = {
+  data: [],
+  status: null,
+  error: null,
+};
+
+export const apiSlice = createSlice({
+  name: 'api',
+  initialState,
+  reducers: {},
+  extraReducers: {
+    [fetchUsers.pending]:
+      (state) => {
+        state.status = 'pending';
+        state.error = null;
+      },
+    [fetchUsers.fulfilled]: (state, action) => {
+        state.data = action.payload;
+        state.status = 'resolved';
+      },
+    [fetchUsers.rejected]:  (state, action) => {
+        state.status = 'rejected';
+        state.error = action.payload;
+      }
+  },
+})
+
+export default apiSlice.reducer
+            </code>
+          </pre>
+              <pre>
+            <code class="language-typescript match-braces rainbow-braces">
+import { CACHE_NAME } from "./constants"
+
+// https://github.com/microsoft/TypeScript/issues/14877#issuecomment-1057795918
+declare const self: ServiceWorkerGlobalScope
+
+self.addEventListener("install", () => {
+  self.skipWaiting()
+  console.debug("service worker has been installed")
+})
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(self.clients.claim())
+  console.debug("service worker has been activated", CACHE_NAME)
+})
+
+self.addEventListener("fetch", (event) => {
+  const { request } = event
+  const { clientId } = event
+
+  if (request.method !== "GET") return
+
+    event.respondWith(
+      caches.match(request, { cacheName: CACHE_NAME }).then(
+        (response) =>
+          response ||
+          fetch(request).then(() =>
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(request, response!.clone()).then(() =>
+                self.clients.get(clientId).then((client) =>
+                  client!.postMessage({
+                    type: "cached",
+                    payload: request.url,
+                  })
+                )
+              )
+              return response!
+            })
+          )
+      )
+    )
+})
+            </code>
+          </pre>
+            </div>
+          </section>
+          <section class="skills">
+            <h3>Skills</h3>
+            <div class="skills__container">
+              <ul class="skills__list">
+                <li class="skills__header">Basic</li>
+                <li class="skills__item">
+                  <img alt="html" class="skills__icon" src="assets/icons/html5.svg" />
+                  <span>HTML</span>
+                </li>
+                <li class="skills__item">
+                  <img alt="css" class="skills__icon" src="assets/icons/css3.svg" />
+                  <span>CSS</span>
+                </li>
+                <li class="skills__item">
+                  <img alt="JavaScript" class="skills__icon" src="assets/icons/javascript.svg" />
+                  <span>JavaScript</span>
+                </li>
+                <li class="skills__item">
+                  <img
+                    alt="typescript"
+                    class="skills__icon"
+                    src="assets/icons/typescriptlang-icon.svg"
+                  />
+                  <span>TypeScript</span>
+                </li>
+                <li class="skills__item">
+                  <img alt="SASS" class="skills__icon" src="assets/icons/sass.svg" />
+                  <span>SASS/SCSS</span>
+                </li>
+              </ul>
+              <ul class="skills__list">
+                <li class="skills__header">Frameworks</li>
+                <li class="skills__item">
+                  <img alt="react" class="skills__icon" src="assets/icons/react.svg" />
+                  <span>React</span>
+                </li>
+                <li class="skills__item">
+                  <img alt="react" class="skills__icon" src="assets/icons/svelte.svg" />
+                  <span>Svelte</span>
+                </li>
+                <li class="skills__item">
+                  <img alt="react" class="skills__icon" src="assets/icons/vue.svg" />
+                  <span>Vue</span>
+                </li>
+              </ul>
+              <ul class="skills__list">
+                <li class="skills__header">Tools</li>
+                <li class="skills__item">
+                  <img alt="git" class="skills__icon" src="assets/icons/git.svg" />
+                  <span>Git</span>
+                </li>
+                <li class="skills__item">
+                  <img alt="webpack" class="skills__icon" src="assets/icons/js_webpack-icon.svg" />
+                  <span>Webpack</span>
+                </li>
+                <li class="skills__item">
+                  <img alt="vite" class="skills__icon" src="assets/icons/vite.svg" />
+                  <span>Vite</span>
+                </li>
+              </ul>
+              <ul class="skills__list">
+                <li class="skills__header">Testing</li>
+                <li class="skills__item">
+                  <img alt="webpack" class="skills__icon" src="assets/icons/cypress.png" />
+                  <span>Cypress</span>
+                </li>
+                <li class="skills__item">
+                  <img alt="vite" class="skills__icon" src="assets/icons/playwright.svg" />
+                  <span>Playwright</span>
+                </li>
+              </ul>
+              <ul class="skills__list">
+                <li class="skills__header">Other</li>
+                <li class="skills__item">
+                  <img alt="Python" class="skills__icon" src="assets/icons/python.svg" />
+                  <span>Python</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h3>English level</h3>
+            <p>My current English level is B1-B2, and I'm constantly trying to improve it.</p>
+            <p>I can easily read books and understand english speech.</p>
+          </section>
+          <section class="education">
+            <h3>My Education</h3>
+            <ul>
+              <li>Gomel State University (2018-2022)</li>
+              <li>
+                <a href="https://app.rs.school/certificate/qu0q78vp">RS School JS course</a>
+              </li>
+              <li>
+                <a href="https://www.sololearn.com/Certificate/1014-15448056/jpg/"
+                  >Basic HTML course</a
+                >
+              </li>
+              <li>
+                <a href="https://www.sololearn.com/Certificate/1023-15448056/jpg/"
+                  >Basic CSS course</a
+                >
+              </li>
+              <li>
+                <a href="https://www.efset.org/cert/Fyfv6R">English EF SET test</a>
+              </li>
+            </ul>
+          </section>
+          <section id="works">
+            <h3>My works</h3>
+            <h2>Commercial projects</h2>
+            <div class="projects__commercial">
+              <div class="container">
+                <input type="radio" name="slider" id="item-1" checked />
+                <input type="radio" name="slider" id="item-2" />
+                <input type="radio" name="slider" id="item-3" />
+                <div class="cards">
+                  <label class="card" for="item-1" id="project-1">
+                    <div class="hover-bg top-bg">
+                      <h4 class="cards__title">Statval</h4>
+                    </div>
+                    <img
+                      src="assets/works/commercial/statval.png"
+                      alt="statval"
+                      class="project__image"
+                    />
+                    <div class="hover-bg bottom-bg">
+                      <div class="btn-container">
+                        <a href="https://statval.com/" class="btn-link">Demo link</a>
+                      </div>
+                    </div>
+                  </label>
+                  <label class="card" for="item-2" id="project-2">
+                    <div class="hover-bg top-bg">
+                      <h4 class="cards__title">WebAR Beauty</h4>
+                    </div>
+                    <img
+                      src="assets/works/commercial/beauty.png"
+                      alt="beauty"
+                      class="project__image"
+                    />
+                    <div class="hover-bg bottom-bg">
+                      <div class="btn-container">
+                        <a
+                          href="https://cdn.sdk-webar-demo.on.banuba.net/beauty-web/index.html#/"
+                          class="btn-link"
+                          >Demo link</a
+                        >
+                      </div>
+                    </div>
+                  </label>
+                  <label class="card" for="item-3" id="project-3">
+                    <div class="hover-bg top-bg">
+                      <h4 class="cards__title">Whoosh</h4>
+                    </div>
+                    <img
+                      src="assets/works/commercial/whoosh.png"
+                      alt="whoosh"
+                      class="project__image"
+                    />
+                    <div class="hover-bg bottom-bg">
+                      <div class="btn-container">
+                        <a href="https://app.whooshcall.com/" class="btn-link">Demo link</a>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="player">
+                  <div class="upper-part">
+                    <div class="info-area" id="test">
+                      <div class="project-info" id="project-info-1">
+                        <p>
+                          <span>Description: </span>SPA and PWA built on React. The application
+                          serves as a resource for real estate valuation.
+                        </p>
+                        <p>
+                          <span>Technologies: </span>React, React query, Bing maps, Styled
+                          Components.
+                        </p>
+                        <p><span>Time: </span>6 months</p>
+                        <p><span>Responsibilities:</span></p>
+                        <ul>
+                          <li>Development</li>
+                          <li>Maintenance</li>
+                          <li>Implementing new features</li>
+                          <li>Testing and bug fixing</li>
+                          <li>Engineering app architecture</li>
+                          <li>Approach structure and business rules</li>
+                        </ul>
+                      </div>
+                      <div class="project-info" id="project-info-2">
+                        <p>
+                          <span>Description: </span>SPA app for demo preview and testing WebAR
+                          beauty effects, with possibility of exporting applied effects presets.
+                        </p>
+                        <p><span>Technologies: </span>JavaScript, VUE, WebAR SDK, Bulma, Buefy.</p>
+                        <p><span>Time: </span>4 months</p>
+                        <p><span>Responsibilities:</span></p>
+                        <ul>
+                          <li>Development</li>
+                          <li>Maintenance</li>
+                          <li>Implementing new features</li>
+                          <li>Testing and bug fixing</li>
+                          <li>Engineering app architecture</li>
+                        </ul>
+                      </div>
+                      <div class="project-info" id="project-info-3">
+                        <p>
+                          <span>Description: </span>Video conferencing app with webAR SDK and a lot
+                          of features.
+                        </p>
+                        <p>
+                          <span>Technologies: </span>TypeScript, WebRTC, WebAR SDK, Svelte, Canvas,
+                          Cypress, Playwright, Flutter.
+                        </p>
+                        <p><span>Time: </span>1 year</p>
+                        <p><span>Responsibilities:</span></p>
+                        <ul>
+                          <li>Development</li>
+                          <li>Maintenance</li>
+                          <li>Implementing new features</li>
+                          <li>Writing auto-tests</li>
+                          <li>Testing and bug fixing</li>
+                          <li>Engineering app architecture</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2>Demo and learning projects</h2>
+            <div class="projects">
+              <figure class="project">
+                <span></span>
+                <img src="assets/works/demo/zoo.png" alt="zoo" class="project__image" />
+                <figcaption>
+                  <h4 class="cards__title">Online zoo website</h4>
+                  <div class="btn-container">
+                    <a href="https://romantic-mestorf-690cd1.netlify.app" class="btn-link"
+                      >Demo link</a
+                    >
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="project">
+                <span></span>
+                <img src="assets/works/demo/piano.jpg" alt="piano" class="project__image" />
+                <figcaption>
+                  <h4 class="cards__title">Virtual piano</h4>
+                  <div class="btn-container">
+                    <a
+                      href="https://rolling-scopes-school.github.io/pashkevichtania-JSFE2021Q1/virtual-piano/"
+                      class="btn-link"
+                      >Demo link</a
+                    >
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="project">
+                <span></span>
+                <img src="assets/works/demo/match-match.png" alt="cite" class="project__image" />
+                <figcaption>
+                  <h4 class="cards__title">Match-match game</h4>
+                  <div class="btn-container">
+                    <a
+                      href="https://rolling-scopes-school.github.io/pashkevichtania-JSFE2021Q1/match-match-game/dist/"
+                      class="btn-link"
+                      >Demo link</a
+                    >
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="project">
+                <span></span>
+                <img src="assets/works/demo/eng.png" alt="cite" class="project__image" />
+                <figcaption>
+                  <h4 class="cards__title">English Learning app for kids</h4>
+                  <div class="btn-container">
+                    <a href="https://pashkevichtania-english-for-kids.netlify.app" class="btn-link"
+                      >Demo link</a
+                    >
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+          <section id="contact">
+            <h3>Contact information:</h3>
+            <ul class="contacts__list">
+              <li class="contact">
+                <a
+                  href="mailto:pashkevichtania2004@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="assets/social/gmail.svg" alt="gmail" class="contact__icon" />
+                  <span>Email</span>
+                </a>
+              </li>
+              <li class="contact">
+                <a href="https://www.linkedin.com/in/tatsiana-pashkevich-64b760208/">
+                  <img src="assets/social/linkedin-logo.svg" alt="linkedin" class="contact__icon" />
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+              <li class="contact">
+                <a href="https://github.com/PashkevichTania">
+                  <img src="assets/social/github.svg" alt="github" class="contact__icon" />
+                  <span>GitHub</span>
+                </a>
+              </li>
+              <li class="contact">
+                <a href="https://vk.com/id222248841">
+                  <img src="assets/social/vk-logo.svg" alt="vk" class="contact__icon" />
+                  <span>VK</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <a href="https://github.com/PashkevichTania" class="link">GitHub</a>
+      <p>&copy Pashkevich Tatsiana 2022</p>
+    </footer>
+    <script src="index.js"></script>
+    <script src="/prism/prism.js"></script>
+  </body>
+</html>
