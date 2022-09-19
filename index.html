@@ -60,29 +60,49 @@
             <div class="code">
               <pre>
             <code class="language-typescript match-braces rainbow-braces">
-export function debounce&lt;A extends any[], R extends any&gt;(
-  _target: Object,
-  _propertyKey: string | symbol,
-  descriptor: TypedPropertyDescriptor&lt;(...args: A) =&gt; R&gt;
-) {
-  const fn = descriptor.value!
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import {getUsersAPI} from "services/home";
 
-  let isUsing = false
+export const fetchUsers = createAsyncThunk(
+  'api/fetchUsers',
+  async function (_, {rejectWithValue}) {
+    try {
+      return await getUsersAPI();
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
 
-  return {
-    ...descriptor,
-    async value(...args: A): Promise&lt;Awaited&lt;R&gt;&gt; {
-      if (isUsing) throw new Error("The function call is in progress")
-
-      try {
-        isUsing = true
-        return await fn.call(this, ...args)
-      } finally {
-        isUsing = false
-      }
-    },
   }
-}
+);
+
+const initialState = {
+  data: [],
+  status: null,
+  error: null,
+};
+
+export const apiSlice = createSlice({
+  name: 'api',
+  initialState,
+  reducers: {},
+  extraReducers: {
+    [fetchUsers.pending]:
+      (state) => {
+        state.status = 'pending';
+        state.error = null;
+      },
+    [fetchUsers.fulfilled]: (state, action) => {
+        state.data = action.payload;
+        state.status = 'resolved';
+      },
+    [fetchUsers.rejected]:  (state, action) => {
+        state.status = 'rejected';
+        state.error = action.payload;
+      }
+  },
+})
+
+export default apiSlice.reducer
             </code>
           </pre>
               <pre>
