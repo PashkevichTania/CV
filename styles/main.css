@@ -123,7 +123,7 @@ h4 {
   left: 0;
   bottom: 0.07em;
   height: 0.1em;
-  width: 0%;
+  width: 0;
   background: linear-gradient(110deg, #e1f549, #29d0be, #6cb8ea, #ff5959);
   z-index: -1;
   transition: width 0.25s cubic-bezier(0.6, 0, 0.4, 1);
@@ -196,7 +196,7 @@ h4 {
   }
   .nav__list .nav__item a {
     padding: 6px 15px;
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 .section_img {
@@ -436,13 +436,19 @@ h4 {
 .skills .skills__item {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .skills .skills__icon {
-  padding-right: 10px;
-  padding-bottom: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
   display: inline-block;
   width: 30px;
   height: 30px;
+}
+
+.bg-icon{
+  background-color: white;
+  border-radius: 50%;
 }
 
 .education {
@@ -561,7 +567,7 @@ h4 {
   transform: translatex(0) scale(1);
   opacity: 1;
   z-index: 1;
-  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  box-shadow: 0 0 5px 0 rgba(81, 81, 81, 0.47);
 }
 #works .projects__commercial #item-1:checked ~ .cards #project-1:hover > .hover-bg,
 #works .projects__commercial #item-2:checked ~ .cards #project-2:hover > .hover-bg,
@@ -611,6 +617,10 @@ h4 {
 #works .projects__commercial #item-3:checked ~ .player #test {
   transform: translateY(-600px);
 }
+#works .projects-demo__title {
+  margin-top: 30px;
+}
+
 #works .projects {
   display: flex;
   flex-direction: row;
